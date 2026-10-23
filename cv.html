@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="cv.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV of Ragheb Bel Haj Esghaier, junior web developer.">
     <title>CV - Ragheb Bel Haj Esghaier</title>
+    <link rel="icon" href="icone.png" type="image/png">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
     <header id="home">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <a href="#contact" class="btn-dark">Contact me</a>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#profil">Profile</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -18,13 +23,21 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div id="liveAlertPlaceholder"></div>
 
-        <div>
-            <p>Hello, my name is</p>
-            <h1>Ragheb Bel Haj Esghaier</h1>
-            <img src="ragheb.jpeg" alt="Profile photo of Ragheb" width="150" height="150">
-            <p>Junior web developer</p>
-            <p><a href="#contact">Contact me</a></p>
+        <div class="tahani">
+
+                <div class="RANA" >
+                    <p class="ayoub">Hello, my name is </p>
+                    <h1 class="belkis">Ragheb Bel Haj Esghaier</h1>
+                    <p class="yunus">Junior web developer</p>
+                </div>
+
+            <div class="maissa">
+                <img src="ragheb.jpeg" alt="Profile photo of Ragheb" width="150" height="150">
+                <button class="project-btn"> OPEN TO PROJECT </h3>
+            </div>
+           
         </div>
     </header>
 
@@ -80,9 +93,33 @@
             <p><a href="cvragheb.pdf" download>Download CV (PDF)</a></p>
         </section>
     </main>
+    <!-- <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn-solid theme-primary flex-grow-0" id="liveAlertBtn">Show live alert</button> -->
 
     <footer>
         <p>&copy; 2024 Ragheb Bel Haj Esghaier. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type}" role="alert">`,
+            `   <p>${message}</p>`,
+            '   <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            appendAlert('Nice, you triggered this alert message!', 'success')
+        })
+        }
+    </script>
 </body>
 </html>
