@@ -1,97 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV of Ragheb Bel Haj Esghaier, junior web developer.">
     <title>CV - Ragheb Bel Haj Esghaier</title>
     <link rel="stylesheet" href="cv.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="icone.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header id="home">
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#profil">Profile</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="btn-dark">Contact me</a></li>
-            </ul>
-        </nav>
 
-        <div class="tahani">
-            <div class="RANA">
-                <p class="ayoub">Hello, my name is</p>
-                <h1 class="belkis">Ragheb Bel Haj Esghaier</h1>
-                <p class="yunus">Junior web developer</p>
-            </div>
+   <section id="splash">
+        <canvas id="particles"></canvas>
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+        <div class="grid-overlay"></div>
+        <div class="spotlight"></div>
 
-            <div class="maissa">
-                <img src="ragheb.jpeg" alt="Profile photo of Ragheb" width="150" height="150">
-                <button class="project-btn">OPEN TO PROJECT</button>
-            </div>
+        <div class="splash-content">
+            <p class="splash-hello">Hello, I'm Ragheb</p>
+            <h1>WELCOME TO <span class="accent">MY PORTFOLIO.</span></h1>
+            <p class="splash-sub">JUNIOR WEB DEVELOPER</p>
+            <p class="splash-banner">LEARN · BUILD · GROW</p>
+            <button id="get-started" type="button">Get Started <span class="arrow">→</span></button>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section id="profil">
-            <h2>Professional Profile</h2>
-            <p>
-                Motivated beginner in web and computer development, I am currently learning
-                HTML and CSS. I aim to develop my technical skills, gain my first professional
-                experience, and evolve in the field of digital technologies.
-            </p>
-        </section>
+    <div id="site" class="hidden">
+        <header id="home">
+           <nav class="navbar">
+    <a href="#home" class="logo">Ragheb<span>.</span></a>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML <img src="html.png" alt="Logo HTML" width="30" height="30"></li>
-                <li>CSS <img src="css.png" alt="Logo CSS" width="30" height="30"></li>
-                <li>JavaScript (notions) <img src="java.png" alt="Logo JavaScript" width="30" height="30"></li>
-                <li>Python (notions) <img src="pay.webp" alt="Logo Python" width="30" height="30"></li>
-            </ul>
-        </section>
+    <button id="menu-btn" class="menu-btn" type="button"
+            aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Casino website</li>
-                <li>E-commerce website</li>
-                <li>Portfolio website</li>
-            </ul>
-        </section>
+<div id="menu" class="menu-overlay">
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profil">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn-dark">Contact me</a></li>
+        <li><button id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button></li>
+    </ul>
+</div>
+            </nav>
 
-        <section id="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>Arabic : Native language</li>
-                <li>French : Level to specify</li>
-                <li>English : Level to specify</li>
-            </ul>
-        </section>
+            <!-- Même décor que le splash -->
+            <canvas id="hero-particles"></canvas>
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+            <div class="grid-overlay"></div>
+            <div class="spotlight"></div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <ul>
-                <li>Email : <a href="mailto:ragheb.bhs112@gmail.com">ragheb.bhs112@gmail.com</a></li>
-                <li>Phone : <a href="tel:+21624576278">+216 24 576 278</a></li>
-            </ul>
-        </section>
+            <div class="hero-shape"></div>
 
-        <section id="download">
-            <h2>Download my CV</h2>
-            <p><a href="cvragheb.pdf" download>Download CV (PDF)</a></p>
-        </section>
-    </main>
+           <div class="hero-center">
+                <div class="hero-text">
+                    <p class="ayoub">Hello, my name is</p>
+                    <h1 class="belkis">Ragheb <span class="accent">Bel Haj Esghaier</span></h1>
+                    <p class="yunus"><span id="typing">Junior web developer</span><span class="cursor" aria-hidden="true">|</span></p>
+                    <p class="hero-tagline">Learn · Build · Grow</p>
 
-    <footer>
-        <p>&copy; 2024 Ragheb Bel Haj Esghaier. All rights reserved.</p>
-    </footer>
+                    <span class="status-badge"><span class="status-dot"></span>Open to projects</span>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="hero-btn hero-btn-primary">See my projects <span class="arrow">→</span></a>
+                        <a href="cvragheb.pdf" class="hero-btn hero-btn-glass" download>Download CV</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                        <img class="hero-person" src="ragheb.png" alt="Photo de Ragheb">
+                </div>
+
+                <ul class="socials">
+                    <li><a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>
+                    </a></li>
+                    <li><a href="#" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.600 1 2.700 0 3.900-2.400 4.700-4.600 5 .4.3.7.9.7 1.900v2.800c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+                    </a></li>
+                    <li><a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                    </a></li>
+                </ul>
+
+                <a href="#profil" class="scroll-btn" aria-label="Descendre">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section id="profil">
+                <h2>Professional Profile</h2>
+                <p>
+                    Motivated beginner in web and computer development, I am currently learning
+                    HTML and CSS. I aim to develop my technical skills, gain my first professional
+                    experience, and evolve in the field of digital technologies.
+                </p>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML <img src="html.png" alt="Logo HTML" width="30" height="30"></li>
+                    <li>CSS <img src="css.png" alt="Logo CSS" width="30" height="30"></li>
+                    <li>JavaScript (notions) <img src="java.png" alt="Logo JavaScript" width="30" height="30"></li>
+                    <li>Python (notions) <img src="pay.webp" alt="Logo Python" width="30" height="30"></li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li>Casino website</li>
+                    <li>E-commerce website</li>
+                    <li>Portfolio website</li>
+                </ul>
+            </section>
+
+            <section id="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Arabic : Native language</li>
+                    <li>French : Level to specify</li>
+                    <li>English : Level to specify</li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>You can reach me at:</p>
+                <ul>
+                    <li>Email : <a href="mailto:ragheb.bhs112@gmail.com">ragheb.bhs112@gmail.com</a></li>
+                    <li>Phone : <a href="tel:+21624576278">+216 24 576 278</a></li>
+                </ul>
+            </section>
+
+            <section id="download">
+                <h2>Download my CV</h2>
+                <p><a href="cvragheb.pdf" download>Download CV (PDF)</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year">2026</span> Ragheb Bel Haj Esghaier. All rights reserved.</p>    
+        </footer>
+    </div>
+    
+    <script src="script.js" defer>
+        
+    </script>
+
 </body>
 </html>
