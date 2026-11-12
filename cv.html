@@ -142,11 +142,22 @@
             </section>
 
             <section id="contact">
-                <h2>Contact</h2>
-                <p>You can reach me at:</p>
-                <ul>
-                    <li>Email : <a href="mailto:ragheb.bhs112@gmail.com">ragheb.bhs112@gmail.com</a></li>
-                    <li>Phone : <a href="tel:+21624576278">+216 24 576 278</a></li>
+                <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me at
+        <a href="mailto:ragheb.bhs112@gmail.com">ragheb.bhs112@gmail.com</a> or
+        <a href="tel:+21624576278">+216 24 576 278</a>, or send a message below.
+    </p>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <textarea name="message" rows="7" placeholder="Write Something" required></textarea>
+        <button type="submit" class="hero-btn hero-btn-primary">Send Message <span class="arrow">→</span></button>
+    </form>
+</section> : <a href="tel:+21624576278">+216 24 576 278</a></li>
                 </ul>
             </section>
 
